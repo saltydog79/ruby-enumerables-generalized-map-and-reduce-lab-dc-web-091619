@@ -22,47 +22,16 @@ def map(source_array)
 end
 
 
-# SOLUTION CODE FOR REDUCE
-def reduce(s, sp=nil)
-  if sp
-    accum = sp
+def reduce(source_array, starting_point=nil)
+  if starting_point
     i = 0
   else
-    accum = s[0]
+    starting_point = source_array[0]
     i = 1
   end
-  while i < s.length
-    accum = yield(accum, s[i])
+  while i < source_array.length
+    starting_point = yield(starting_point, source_array[i])
     i += 1
   end
-  accum
+  starting_point
 end
-
-
-# def reduce_to_total(source_array, starting_point = 0)
-#   i = 0
-# while source_array.length > i do
-#   starting_point += source_array[i]
-#   i+=1
-# end
-# return starting_point
-# end
-#
-#
-# def reduce_to_all_true(source_array)
-# i = 0
-# while source_array.length > i do
-# return false if !source_array[i]
-# i += 1
-# end
-# return true
-# end
-#
-# def reduce_to_any_true(source_array)
-#   i = 0
-#   while source_array.length > i do
-#     return true if source_array[i]
-#     i += 1
-#   end
-#   return false
-# end
