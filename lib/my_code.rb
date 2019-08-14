@@ -1,15 +1,3 @@
-# MY CODE...which didn't pass. Difference is my inclusion of do...end. Solution code did not include that part.
-
-# def my_own_map(source_array)
-#     new_array = []
-#     i = 0
-#     while source_array.length > 1 do
-# new_array.push( yield(source_array[i] ))
-# i += 1
-# end
-# return new_array
-# end
-
 
 def map(source_array)
   new_array = []
